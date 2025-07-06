@@ -1,0 +1,16 @@
+{
+  "name": "tired-property-carry-k39u3",
+  "productName": "tired-property-carry-k39u3",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "Max",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "35.0.0"
+  }
+}
