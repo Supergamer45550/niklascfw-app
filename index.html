@@ -1,18 +1,68 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal Sidebar App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 100vh;
+      background-color: #333;
+      color: #fff;
+      transition: width 0.3s;
+      overflow: hidden;
+    }
+    .sidebar.expanded {
+      width: 200px;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #444;
+      border: none;
+      color: white;
+      padding: 8px;
+      cursor: pointer;
+    }
+    .links {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 10px;
+    }
+    .links a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <div class="links" id="links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const links = document.getElementById('links');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('expanded');
+    }
+  </script>
+</body>
 </html>
