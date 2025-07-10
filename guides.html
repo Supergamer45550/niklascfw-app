@@ -3,11 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NiklasCFW App Pre-Alpha-1.0</title>
+  <title>NiklasCFW App Alpha-1.0</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Test</h1>
-  <p>Seite wird im nächsten update gefüllt</p>
+<div class="sidebar" id="sidebar">
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+  <div class="links" id="links">
+    <a href="index.html">Hauptseite</a>
+    <a class="active" href="guides.html">Guides</a>
+    <a href="#">Kontakt</a>
+    <a href="infos.html">Infos</a>
+  </div>
+</div>
+
+<div class="main-content">
+  <h1>NiklasCFW App</h1>
+  <p>Dies ist der erste test</p>
+</div>
+
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const links = document.getElementById('links');
+
+    function toggleSidebar() {
+      sidebar.classList.toggle('expanded');
+    }
+  </script>
 </body>
 </html>

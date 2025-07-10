@@ -8,7 +8,7 @@ body {
   top: 0;
   left: 0;
   width: 50px;
-  height: 100vh;
+  height: 100vh; 
   background-color: #333;
   color: #fff;
   transition: width 0.3s;
@@ -54,4 +54,9 @@ body {
 
 .sidebar.expanded ~ .main-content {
   margin-left: 200px;
+}
+
+.active {
+    background-color: #444;
+    font-weight: bold;
 }
